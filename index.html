@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;0,800;1,600&family=Quicksand:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="leftSide">
+        <div class="leftSideShadow">
+            <img src="./images/odin-lined.png" alt="" class="odinLogo">
+            <h1>Odin</h1>
+        </div>
+    </div>
+    <div class="rightSide">
+        <div class="rightSideContainer">
+            <div>
+                <p>If you desire to know more about our services please don't hesitate to contact us!</p>
+            </div>
+            <div class="formContainer">
+
+                <h2>Fill in your Personal Information</h2>
+                <form action="POST" class="formItself">
+
+                    <div class="formElem">
+                        <label for="fFirstName">FIRST NAME</label>
+                        <input type="text" name="fFirstName">
+                    </div>
+                    <div class="formElem">
+                        <label for="fLastName">LAST NAME</label>
+                        <input type="text" name="fLastName">
+                    </div>
+                    <div class="formElem">
+                        <label for="fEmail">EMAIL</label>
+                        <input type="email" name="fEmail">
+                    </div>
+                    <div class="formElem">
+                        <label for="fNumber">PHONE NUMBER</label>
+                        <input type="number" name="fNumber">
+                    </div>
+                    <div class="formElem">
+                        <label for="fPassword">PASSWORD</label>
+                        <input type="password" name="fPassword">
+                    </div>
+                    <div class="formElem">
+                        <label for="fPasswordConfirm">CONFIRM PASSWORD</label>
+                        <input type="password" name="fPasswordConfirm">
+                    </div>
+                </form>
+
+            </div>
+            <div>
+                <button type="submit" class="submitButton">Send</button>
+                <h3>Some known questions could be found here</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
