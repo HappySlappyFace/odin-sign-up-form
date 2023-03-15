@@ -29,7 +29,7 @@
             <div class="formContainer">
 
                 <h2>Fill in your Personal Information</h2>
-                <form action="POST" class="formItself">
+                <form action="POST" class="formItself" id="formItself">
 
                     <div class="formElem">
                         <label for="fFirstName">FIRST NAME</label>
@@ -49,21 +49,26 @@
                     </div>
                     <div class="formElem">
                         <label for="fPassword">PASSWORD</label>
-                        <input type="password" name="fPassword">
+                        <input type="password" name="fPassword" id="pass1">
+
                     </div>
                     <div class="formElem">
                         <label for="fPasswordConfirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="fPasswordConfirm">
+                        <input type="password" name="fPasswordConfirm" id="pass2">
+                        <p class="errorMessage"></p>
                     </div>
                 </form>
 
             </div>
             <div>
-                <button type="submit" class="submitButton">Send</button>
-                <h3>Some known questions could be found here</h3>
+                <button type="submit" form="formItself" class="submitButton">Send</button>
+                <h3>Some known questions could be found <span><a target="_blank"
+                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="externalLink">here.</a></span>
+                </h3>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

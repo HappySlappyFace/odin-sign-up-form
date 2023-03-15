@@ -77,28 +77,59 @@ body{
 .rightSideContainer >div{
     padding: 2rem ;
 }
+
+.rightSideContainer>div>p{
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+}
 .formContainer{
 
     background-color: white;
     padding: 2rem ;
     box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
 }
+.formContainer>h2{
+    padding-bottom: 32px;
+}
+.rightSideContainer>div>h3{
+    padding-top: 16px;
+    font-weight: 500;
+}
 .formItself{
     display: grid;
-    grid-template-columns: repeat(2,clamp(11rem,10vw,30rem));
-    /* grid-template-rows: 100px; */
+    grid-template-columns: repeat(2,clamp(12rem,30vw,40rem));
+
     grid-auto-rows: 50px;
 }
 .formElem>input{
     display: block;
-    width: clamp(10rem,10vw,30rem);
+    width: 80%;
     height: 1.5rem;
     border-radius: 0.2rem;
     border: solid 1px #E5E7EB;
+    padding: 0px 4px;
 }
 .formElem>input:focus{
-    border: 0px;
-    box-shadow: 1px 1px 3px 0px #2e2e2e;
+    /* border: solid 0px transparent; */
+    outline-color: rgba(60,90,255,0.7);
+    outline-style: solid;
+    outline-width: 2px;
+    box-shadow: 0px 0px 1px 0px #e4e4e4;
+    animation-name: inputOnFocus;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+input.error{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(255,40,30,0.9);
+    box-shadow: 0px 0px 1px 0px #e4e4e4;
+}
+.error::after{
+    font-weight: thin;
+    font-size: 0.7rem;
+    content: "* Passwords do not match";
 }
 .submitButton{
     border: 0px;
@@ -107,6 +138,10 @@ body{
     padding: 0.6rem 2rem;
     font-weight: 500;
     border-radius: 0.5rem;
+}
+.externalLink{
+    color: #596D48;
+    font-weight: 700;
 }
 @media only screen and (max-width: 940px) {
     .leftSideShadow{
@@ -120,3 +155,38 @@ body{
         display: block;
     }
 }
+@media only screen and (max-width: 600px) {
+    body{
+        flex-direction: column;
+    }
+    .leftSideShadow{
+        margin: 0;
+        height: 10rem;
+    }
+    .formItself{
+        grid-template-columns: repeat(2,clamp(12rem,43vw,60rem));
+    }
+    button{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .formItself{
+        grid-template-columns: repeat(1,100%);
+    }
+    .formElem>input{
+        width: 100%;
+    }
+}
+
+
+@keyframes inputOnFocus {
+    from {
+        outline-color: #E5E7EB;
+        outline-width: 0px;
+    }
+    to {
+        outline-color: rgba(60,90,255,0.5);
+        outline-width: 3px;
+    }
+  }
